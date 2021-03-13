@@ -17,7 +17,18 @@ TextStyle greyTextStyle = GoogleFonts.poppins().copyWith(
   fontWeight: FontWeight.w400,
 );
 
+TextStyle greyLightTextStyle = GoogleFonts.poppins().copyWith(
+  color: greyColor,
+  fontWeight: FontWeight.w400,
+);
+
 TextStyle whiteTextStyle = GoogleFonts.poppins().copyWith(
   color: whiteColor,
+  fontWeight: FontWeight.w400,
+);
+
+
+TextStyle purpleTextStyle = GoogleFonts.poppins().copyWith(
+  color: purpleColor,
   fontWeight: FontWeight.w400,
 );

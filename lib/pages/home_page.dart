@@ -125,7 +125,9 @@ class HomePage extends StatelessWidget {
                   height: 36,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24,),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 24,
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -147,13 +149,45 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 19,
                 ),
-                Popular(),
+                Container(
+                  height: 180,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      PopularWidget(Popular(
+                        id: 1,
+                        name: 'Pangsit',
+                        imageUrl: 'assets/kul1.png',
+                        rating: 4.6,
+                        isPopular: true
+                      )),
+                      PopularWidget(Popular(
+                        id: 2,
+                        name: 'Mie Ayam',
+                        imageUrl: 'assets/kul2.png',
+                          rating: 4.6,
+                          isPopular: false
+                      )),
+                      PopularWidget(Popular(
+                        id: 3,
+                        name: 'Midoksang',
+                        imageUrl: 'assets/kul4.png',
+                          rating: 4.6,
+                          isPopular: false
+                      )),
+                      SizedBox(
+                        width: 24,
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(
                   height: 24,
                 ),
-
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24,),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 24,
+                  ),
                   child: Text(
                     'Kategori',
                     style: primaryTextStyle.copyWith(fontSize: 20),
@@ -162,9 +196,43 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 18,
                 ),
-                Kategori(),
+                Container(
+                  height: 150,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      KategoriWidget(
+                        Kategori(
+                          id: 1,
+                          name: "Ceker Mang Nden",
+                          imageUrl: 'assets/kul5.png',
+                          alamat: "Belakang Unpak",
+                        ),
+                      ),
+                      KategoriWidget(
+                        Kategori(
+                          id: 2,
+                          name: "Rasa Utama",
+                          imageUrl: 'assets/kul6.png',
+                          alamat: "Depan Unpak",
+                        ),
+                      ),
+                      KategoriWidget(
+                        Kategori(
+                          id: 1,
+                          name: "Otak Otak",
+                          imageUrl: 'assets/detail1.png',
+                          alamat: "Samping Unpak",
+                        ),
+                      ),
+                      SizedBox(
+                        width: 24,
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(
-                  height: 30,
+                  height: 90,
                 ),
               ],
             ),
@@ -175,7 +243,10 @@ class HomePage extends StatelessWidget {
         height: 55,
         width: MediaQuery.of(context).size.width - (2 * 24),
         decoration: BoxDecoration(
-            color: Color(0xffF6F7F8), borderRadius: BorderRadius.circular(23)),
+          color: Color(0xffF6F7F8),
+          borderRadius: BorderRadius.circular(23),
+          border: Border.all(width: 1, color: greyColor),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
