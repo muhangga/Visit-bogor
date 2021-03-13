@@ -64,7 +64,7 @@ class PopularWidget extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 15,
+                bottom: 12,
                 left: 35,
                 child: Text(
                   '${popular.rating}',

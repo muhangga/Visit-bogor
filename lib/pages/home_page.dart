@@ -155,26 +155,23 @@ class HomePage extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     children: [
                       PopularWidget(Popular(
-                        id: 1,
-                        name: 'Pangsit',
-                        imageUrl: 'assets/kul1.png',
-                        rating: 4.6,
-                        isPopular: true
-                      )),
-                      PopularWidget(Popular(
-                        id: 2,
-                        name: 'Mie Ayam',
-                        imageUrl: 'assets/kul2.png',
+                          id: 1,
+                          name: 'Pangsit',
+                          imageUrl: 'assets/kul1.png',
                           rating: 4.6,
-                          isPopular: false
-                      )),
+                          isPopular: true)),
                       PopularWidget(Popular(
-                        id: 3,
-                        name: 'Midoksang',
-                        imageUrl: 'assets/kul4.png',
+                          id: 2,
+                          name: 'Mie Ayam',
+                          imageUrl: 'assets/kul2.png',
                           rating: 4.6,
-                          isPopular: false
-                      )),
+                          isPopular: false)),
+                      PopularWidget(Popular(
+                          id: 3,
+                          name: 'Midoksang',
+                          imageUrl: 'assets/kul4.png',
+                          rating: 4.6,
+                          isPopular: false)),
                       SizedBox(
                         width: 24,
                       ),
@@ -201,12 +198,17 @@ class HomePage extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      KategoriWidget(
-                        Kategori(
-                          id: 1,
-                          name: "Ceker Mang Nden",
-                          imageUrl: 'assets/kul5.png',
-                          alamat: "Belakang Unpak",
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_) => DetailPage(),),);
+                        },
+                        child: KategoriWidget(
+                          Kategori(
+                            id: 1,
+                            name: "Ceker Mang Nden",
+                            imageUrl: 'assets/kul5.png',
+                            alamat: "Belakang Unpak",
+                          ),
                         ),
                       ),
                       KategoriWidget(
@@ -252,11 +254,11 @@ class HomePage extends StatelessWidget {
           children: [
             BottomNavbarItem(
               imageUrl: 'assets/icon_list.png',
-              isActive: true,
+              isActive: false,
             ),
             BottomNavbarItem(
               imageUrl: 'assets/icon_home.png',
-              isActive: false,
+              isActive: true,
             ),
             BottomNavbarItem(
               imageUrl: 'assets/icon_user.png',

@@ -5,3 +5,4 @@ import 'package:visitbogor/widgets/widgets.dart';
 
 part 'home_page.dart';
 part 'splash_page.dart';
+part 'detail_page.dart';
