@@ -1,11 +1,12 @@
 part of 'widgets.dart';
 
-Color primaryColor = Color(0xff403F3F);
+Color primaryColor = Color(0xff141D2E);
 Color purpleColor = Color(0xff403F3F);
 Color backgroundColor = Color(0xff566583);
 Color whiteColor = Color(0xffFFFFFF);
 Color greyColor = Color(0xffA8B0BF);
 Color blueLightColor = Color(0xff566583);
+Color greyLightColor = Color(0xff77777A);
 
 TextStyle primaryTextStyle = GoogleFonts.poppins().copyWith(
   color: primaryColor,
@@ -18,7 +19,7 @@ TextStyle greyTextStyle = GoogleFonts.poppins().copyWith(
 );
 
 TextStyle greyLightTextStyle = GoogleFonts.poppins().copyWith(
-  color: greyColor,
+  color: greyLightColor,
   fontWeight: FontWeight.w400,
 );
 

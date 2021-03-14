@@ -7,8 +7,16 @@ class SplashPage extends StatelessWidget {
       backgroundColor: whiteColor,
       body: Column(
         children: [
+          Align(
+            alignment: Alignment.topRight,
+            child: Image.asset(
+              'assets/bg_top.png',
+              width: 150,
+              height: 150,
+            ),
+          ),
           SizedBox(
-            height: 180,
+            height: 30,
           ),
           Center(
             child: Image.asset(
@@ -27,7 +35,7 @@ class SplashPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => LoginPage(),
                   ),
                 );
               },
@@ -39,6 +47,16 @@ class SplashPage extends StatelessWidget {
                 'Lanjutkan',
                 style: whiteTextStyle,
               ),
+            ),
+          ),
+          SizedBox(
+            height: 53,
+          ),
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Image.asset(
+              'assets/bg_bottom.png',
+              width: 100,
             ),
           )
         ],

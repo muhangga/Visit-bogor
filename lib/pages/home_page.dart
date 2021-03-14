@@ -199,8 +199,13 @@ class HomePage extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     children: [
                       GestureDetector(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (_) => DetailPage(),),);
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => DetailPage(),
+                            ),
+                          );
                         },
                         child: KategoriWidget(
                           Kategori(
@@ -252,17 +257,30 @@ class HomePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            BottomNavbarItem(
-              imageUrl: 'assets/icon_list.png',
-              isActive: false,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (_) => ListPage(),
+                ),);
+              },
+              child: BottomNavbarItem(
+                imageUrl: 'assets/icon_list.png',
+                isActive: false,
+              ),
             ),
-            BottomNavbarItem(
-              imageUrl: 'assets/icon_home.png',
-              isActive: true,
+            GestureDetector(
+              onTap: () {},
+              child: BottomNavbarItem(
+                imageUrl: 'assets/icon_home.png',
+                isActive: true,
+              ),
             ),
-            BottomNavbarItem(
-              imageUrl: 'assets/icon_user.png',
-              isActive: false,
+            GestureDetector(
+              onTap: () {},
+              child: BottomNavbarItem(
+                imageUrl: 'assets/icon_user.png',
+                isActive: false,
+              ),
             ),
           ],
         ),
