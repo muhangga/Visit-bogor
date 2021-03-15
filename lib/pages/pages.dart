@@ -9,3 +9,4 @@ part 'list_page.dart';
 part 'profile_page.dart';
 part 'splash_page.dart';
 part 'login_page.dart';
+part 'sign_up_page.dart';

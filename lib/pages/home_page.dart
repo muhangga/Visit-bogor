@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 IconButton(
+                  onPressed: () {},
                   icon: Icon(
                     Icons.brightness_5_outlined,
                     color: primaryColor,
@@ -35,7 +36,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Victoria Smith',
+                            'Muhamad Angga',
                             style: primaryTextStyle.copyWith(
                               fontSize: 25,
                             ),
@@ -44,7 +45,7 @@ class HomePage extends StatelessWidget {
                       ),
                       Spacer(),
                       Image.asset(
-                        'assets/photo.png',
+                        'assets/user_pic.png',
                         width: 60,
                       ),
                     ],
@@ -259,9 +260,12 @@ class HomePage extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (_) => ListPage(),
-                ),);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => ListPage(),
+                  ),
+                );
               },
               child: BottomNavbarItem(
                 imageUrl: 'assets/icon_list.png',

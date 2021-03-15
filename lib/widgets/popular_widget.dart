@@ -15,13 +15,30 @@ class PopularWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(18),
         child: Container(
           width: 120,
+          height: 180,
           child: Stack(
             children: [
-              Image.asset(
-                popular.imageUrl,
-                width: 120,
+              Container(
                 height: 180,
-                fit: BoxFit.cover,
+                width: 120,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(popular.imageUrl),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Container(
+                    height: 180,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          colors: [
+                            Colors.black.withOpacity(0.35),
+                            Colors.black.withOpacity(0),
+                          ]),
+                    )),
               ),
               popular.isPopular
                   ? Align(

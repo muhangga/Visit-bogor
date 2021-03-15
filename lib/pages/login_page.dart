@@ -44,12 +44,14 @@ class _LoginPageState extends State<LoginPage> {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    labelText: "Email Address",
-                    hintText: "Email Address",
+                    labelText: "Email",
+                    hintText: "Email",
                   ),
                 ),
               ),
-              SizedBox(height:20,),
+              SizedBox(
+                height: 20,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: 24,
@@ -66,39 +68,65 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              SizedBox(height:10,),
+              SizedBox(
+                height: 10,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24),
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: Text(
                     'Forgot password',
-                    style: greyLightTextStyle, textAlign: TextAlign.right,),
+                    style: greyLightTextStyle,
+                    textAlign: TextAlign.right,
+                  ),
                 ),
               ),
-              SizedBox(height:25,),
+              SizedBox(
+                height: 25,
+              ),
               Container(
                 width: 348,
                 height: 54,
                 child: RaisedButton(
                   color: primaryColor,
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (_) => HomePage(),
-                    ));
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => HomePage(),
+                        ));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Text('Sign in', style: whiteTextStyle,),
+                  child: Text(
+                    'Sign in',
+                    style: whiteTextStyle,
+                  ),
                 ),
               ),
-              SizedBox(height:20,),
+              SizedBox(
+                height: 20,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('First time here? ',style: greyLightTextStyle,),
-                  Text('Register Now', style: primaryTextStyle,),
+                  Text(
+                    'First time here? ',
+                    style: greyLightTextStyle,
+                  ),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (_) => SignUp(),
+                      ));
+                    },
+                    child: Text(
+                      'Register Now',
+                      style: primaryTextStyle,
+                    ),
+                  ),
                 ],
               ),
             ],

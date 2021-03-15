@@ -14,13 +14,30 @@ class KategoriWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(18),
         child: Container(
           width: 200,
+          height: 150,
           child: Stack(
             children: [
-              Image.asset(
-                kategori.imageUrl,
+              Container(
                 width: 200,
                 height: 150,
-                fit: BoxFit.cover,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(kategori.imageUrl),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Container(
+                    height: 200,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          colors: [
+                            Colors.black.withOpacity(0.35),
+                            Colors.black.withOpacity(0),
+                          ]),
+                    )),
               ),
               Positioned(
                 left: 10,
